@@ -1,0 +1,174 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: black;
+  font-size: 15px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 30px;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+}
+
+.links li {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.links li:hover {
+  color: grey;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login a {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+  color: white;
+}
+
+.login a:hover {
+  border-bottom: 1px solid gold;
+}
+
+.login div {
+  width: 1px;
+  height: 30px;
+  background-color: grey;
+}
+
+.app__navbar-smallscreen {
+  display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-black);
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.overlay__close {
+  font-size: 27px;
+  color: gold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.app__navbar-smallscreen_links {
+  margin-top: 70px;
+  list-style: none;
+  background-color: black;
+}
+
+.app__navbar-smallscreen_links li {
+  margin: 2rem;
+  cursor: pointer;
+  color: gold;
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--font-base);
+}
+
+.app__navbar-smallscreen_links li a {
+  text-decoration: none;
+  color: gold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app__navbar-smallscreen_links li:hover {
+  color: white;
+}
+
+@media screen and (max-width: 2000px) {
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .links {
+    display: none;
+  }
+
+  .app__navbar-smallscreen {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .login {
+    display: none;
+  }
+}
+
+.login-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.login-form-container {
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
