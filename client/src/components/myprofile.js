@@ -10,7 +10,7 @@ const Myprofile = () => {
 
   useEffect(() => {
     if (token) {
-      axios.get('http://localhost:3000/myprofile', {
+      axios.get('https://ehungry.onrender.com/myprofile', {
         headers: {
           'x-token': token,
         },
