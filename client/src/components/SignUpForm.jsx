@@ -15,7 +15,7 @@ const Register = () => {
 
     const submitHandler = e => {
         e.preventDefault();
-        axios.post('https://ehungry.onrender.com', data).then(
+        axios.post('https://ehungry.onrender.com/register', data).then(
             res => {
                 alert(res.data);
                 setData({
