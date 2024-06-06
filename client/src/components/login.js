@@ -18,7 +18,7 @@ const Login = () => {
 
     const submitHandler = e => {
         e.preventDefault();
-        axios.post('http://localhost:3000/login', data)
+        axios.post('https://ehungry.onrender.com/login', data)
             .then(res => setToken(res.data.token))
             .catch(err => {
                 console.error(err);
